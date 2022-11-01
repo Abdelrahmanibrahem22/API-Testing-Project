@@ -1,0 +1,84 @@
+ Test Case Example :
+
+Test Case 1: Make sure the response is "200 OK".
+ API: GET /api/v1/Authors
+ Test Case: response should be 200 OK
+ Expected Result: 200 OK
+ Actual Result: 200 OK
+ Status: Pass
+
+Test Case 2: Objects inside response contain, id, idBook, firstName, lastName.
+ API: GET /api/v1/Authors
+ Test Case: response should Objects inside response contain, id, idBook, firstName, lastName.Objects inside response contain, id, idBook, firstName, lastName.
+ Expected Result: 200 OK
+ Actual Result: 200 OK
+ Status: Pass
+#####################################################################
+Test Case Example 1:
+ 
+ Test Case 1: Register a new valid Author successfully and response code "201 Created".
+ 
+ API: POST /api/v1/Authors
+ Test Case: response should be 201 Created
+ Expected Result: 201 created
+ Actual Result: 200 OK
+ Status: fail
+ 
+ #######################################################################################################################
+Test Case Example 1:
+ Test Case 2: firstname & lastname should be mandatory
+ 
+ The request should fail and the response code should be 400 if firstname is missed in the request body.
+ 
+ API: POST /api/v1/Authors
+ Test Case: response should be 400 Bad Request
+ Expected Result: 400 Bad Request
+ Actual Result: 400 Bad Request
+ Status: Pass
+ 
+ Test Case Example 1:
+ Test Case 2: firstname & lastname should be mandatory
+ 
+ The request should fail and the response code should be 400 if lastname is missed in the request body.
+ 
+ API: POST /api/v1/Authors
+ Test Case: response should be 400 Bad Request
+ Expected Result: 400 Bad Request
+ Actual Result: 400 Bad Request
+ Status: Pass
+ 
+ #######################################################################################################################
+ Test Case Example 2: 
+ Test Case 1: Searching with valid idBook should return relative data in response body.
+ 
+ Searching with valid idBook like 1 then all returned results in response body should contain idBook = 1 (same for idBook 2,3).
+  
+ API: GET /api/v1/Authors/authors/books/{idBook}
+ Test Case: response should relative data of this idBook
+ Expected Result: 200 ok
+ Actual Result: 200 ok
+ Status: Pass
+ 
+ #######################################################################################################################
+ Test Case Example 3:
+ Test Case 1: Author's data is updated successfully.
+ Update (firstname, lastname) and confirm that Author's data in response is updated successfully.
+ 
+ API: PUT /api/v1/Authors/{id}
+ Test Case: response should data is updated successfully
+ Expected Result: 200 ok
+ Actual Result: 200 ok
+ Status: Pass
+ 
+ Test Case Example 3:
+Test case 1: The author's data is changed in GET request.
+The purpose of this test case is to make sure that if a change occurred from one endpoint (PUT request),
+ it will affect other endpoints as well (GET request) this is a kind of integration testing.
+ 
+ API: GET /api/v1/Authors/{id}
+ Test Case: response should relative data of this id be updated
+ Expected Result: 200 ok
+ Actual Result: 404 Not Found
+ Status: fail
+ 
+ #######################################################################################################################

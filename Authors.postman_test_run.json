@@ -1,0 +1,457 @@
+{
+	"id": "e092e73d-099e-4898-ba92-2cb52e058526",
+	"name": "Authors",
+	"timestamp": "2022-10-16T13:58:27.754Z",
+	"collection_id": "23622381-305c20d8-96d3-4d10-888a-ad43eef879e1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 41,
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "14b486a3-ed82-4ad9-a194-79e63cacde44",
+			"name": "Get all Authors",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 692,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": true,
+				"check status OK ": true,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header value": true,
+				"check on header (Server) value": true,
+				"check response and body": true,
+				"Body contains id": true,
+				"Body contains idbook": true,
+				"Body contains FristName": true,
+				"Body contains lastName": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check status OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check response and body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains idbook": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains FristName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains lastName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				692
+			],
+			"allTests": [
+				{
+					"check status code =200": true,
+					"check status OK ": true,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header value": true,
+					"check on header (Server) value": true,
+					"check response and body": true,
+					"Body contains id": true,
+					"Body contains idbook": true,
+					"Body contains FristName": true,
+					"Body contains lastName": true
+				}
+			]
+		},
+		{
+			"id": "7a27a9df-6d9c-413a-9d65-dd4422425b66",
+			"name": "Add Author",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": false,
+				"check status Bad Request ": false,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header (Server) value": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"check status Bad Request ": {
+					"pass": 0,
+					"fail": 1
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"check status code =200": false,
+					"check status Bad Request ": false,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header (Server) value": true
+				}
+			]
+		},
+		{
+			"id": "56ef547d-a8a6-46c6-b737-21639c70d076",
+			"name": "Get Authors by IdBook",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/1",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": true,
+				"check status OK ": true,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header value": true,
+				"check on header (Server) value": true,
+				"check response and body": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check status OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check response and body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"check status code =200": true,
+					"check status OK ": true,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header value": true,
+					"check on header (Server) value": true,
+					"check response and body": true
+				}
+			]
+		},
+		{
+			"id": "77bfc341-0d84-4eec-abfe-47a82995844d",
+			"name": "Get Author",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 451,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": true,
+				"check status OK ": true,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header value": true,
+				"check on header (Server) value": true,
+				"check response and body": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check status OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check response and body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				451
+			],
+			"allTests": [
+				{
+					"check status code =200": true,
+					"check status OK ": true,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header value": true,
+					"check on header (Server) value": true,
+					"check response and body": true
+				}
+			]
+		},
+		{
+			"id": "d3978a7a-7c66-4893-b57f-6d7f4bb55c65",
+			"name": "Update data",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/0",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": true,
+				"check status OK ": true,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header value": true,
+				"check on header (Server) value": true,
+				"check response and body": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check status OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check response and body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"check status code =200": true,
+					"check status OK ": true,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header value": true,
+					"check on header (Server) value": true,
+					"check response and body": true
+				}
+			]
+		},
+		{
+			"id": "77392d40-ae4b-4894-aca4-30ef26abc89b",
+			"name": "Delete",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/2",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code =200": true,
+				"check status OK ": true,
+				"check the responseTime ": true,
+				"check the response size ": true,
+				"check on header (Server) value": true,
+				"check on header value": true
+			},
+			"testPassFailCounts": {
+				"check status code =200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check status OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the responseTime ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check the response size ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header (Server) value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check on header value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"check status code =200": true,
+					"check status OK ": true,
+					"check the responseTime ": true,
+					"check the response size ": true,
+					"check on header (Server) value": true,
+					"check on header value": true
+				}
+			]
+		},
+		{
+			"id": "726b8361-50e9-47a2-843e-38033cff29a6",
+			"name": "Check update",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/0",
+			"time": 88,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"check if firstName is update": false
+			},
+			"testPassFailCounts": {
+				"check if firstName is update": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				88
+			],
+			"allTests": [
+				{
+					"check if firstName is update": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1583,
+	"collection": {
+		"requests": [
+			{
+				"id": "14b486a3-ed82-4ad9-a194-79e63cacde44",
+				"method": "GET"
+			},
+			{
+				"id": "7a27a9df-6d9c-413a-9d65-dd4422425b66",
+				"method": "POST"
+			},
+			{
+				"id": "56ef547d-a8a6-46c6-b737-21639c70d076",
+				"method": "GET"
+			},
+			{
+				"id": "77bfc341-0d84-4eec-abfe-47a82995844d",
+				"method": "GET"
+			},
+			{
+				"id": "d3978a7a-7c66-4893-b57f-6d7f4bb55c65",
+				"method": "PUT"
+			},
+			{
+				"id": "77392d40-ae4b-4894-aca4-30ef26abc89b",
+				"method": "DELETE"
+			},
+			{
+				"id": "726b8361-50e9-47a2-843e-38033cff29a6",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,91 @@
+{
+    "id": "633dcddfee922403d13d5498",
+    "aaId": "633dcddd9b32cfef93295e79",
+    "activityBlocked": false,
+    "avatarHash": "64798b0416283e395d57ab9e88b0b287",
+    "avatarUrl": "https://trello-members.s3.amazonaws.com/633dcddfee922403d13d5498/64798b0416283e395d57ab9e88b0b287",
+    "bio": "",
+    "bioData": null,
+    "confirmed": true,
+    "fullName": "Abdelrahman ibrahem Ahmed",
+    "idEnterprise": null,
+    "idEnterprisesDeactivated": [],
+    "idMemberReferrer": null,
+    "idPremOrgsAdmin": [],
+    "initials": "AA",
+    "memberType": "normal",
+    "nonPublic": {},
+    "nonPublicAvailable": true,
+    "products": [],
+    "url": "https://trello.com/abdelrahmanibrahem1112",
+    "username": "abdelrahmanibrahem1112",
+    "status": "disconnected",
+    "aaBlockSyncUntil": null,
+    "aaEmail": null,
+    "aaEnrolledDate": null,
+    "avatarSource": "none",
+    "credentialsRemovedCount": 0,
+    "domainClaimed": null,
+    "email": "abdelrahman.ibrahem1112@gmail.com",
+    "goldSunsetFreeTrialIdOrganization": null,
+    "gravatarHash": "37f238dc87b52fc8e28cd5088ba586fa",
+    "idBoards": [
+        "633dcf263eef400181088af3"
+    ],
+    "idOrganizations": [
+        "633dce485a227800529f0241"
+    ],
+    "idEnterprisesAdmin": [],
+    "limits": {
+        "boards": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 4500,
+                "warnAt": 3600
+            }
+        },
+        "orgs": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 850,
+                "warnAt": 680
+            }
+        }
+    },
+    "loginTypes": [
+        "atlassian"
+    ],
+    "marketingOptIn": {
+        "optedIn": true,
+        "date": "2022-10-05T18:34:38.270Z"
+    },
+    "messagesDismissed": [],
+    "oneTimeMessagesDismissed": [
+        "sent-possible-new-signup-event",
+        "close-menu-of-first-board"
+    ],
+    "prefs": {
+        "privacy": {
+            "fullName": "public",
+            "avatar": "public"
+        },
+        "sendSummaries": true,
+        "minutesBetweenSummaries": 60,
+        "minutesBeforeDeadlineToNotify": 1440,
+        "colorBlind": false,
+        "locale": "en-US"
+    },
+    "trophies": [],
+    "uploadedAvatarHash": null,
+    "uploadedAvatarUrl": null,
+    "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins"
+    ],
+    "isAaMastered": true,
+    "ixUpdate": "14"
+}

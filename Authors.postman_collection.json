@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "305c20d8-96d3-4d10-888a-ad43eef879e1",
+		"name": "Authors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23622381"
+	},
+	"item": [
+		{
+			"name": "Get all Authors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonDate=pm.response.json();\r",
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status OK \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"OK\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(50000);\r",
+							"});\r",
+							"pm.test(\"check on header value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).include(\"application/json\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check response and body\",function()\r",
+							"{\r",
+							"pm.response.to.be.ok;\r",
+							"pm.response.to.be.withBody;\r",
+							"pm.response.to.be.json;\r",
+							"});\r",
+							"//last change\r",
+							"pm.test(\"Body contains id\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"id\");\r",
+							"});\r",
+							"pm.test(\"Body contains idbook\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"idBook\");\r",
+							"});\r",
+							"pm.test(\"Body contains FristName\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"firstName\");\r",
+							"});\r",
+							"pm.test(\"Body contains lastName\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"lastName\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonDate=pm.response.json();\r",
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status Bad Request \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"Created\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(50000);\r",
+							"});\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.globals.set(\"idupdate\", pm.response.json().id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"idBook\": 0,\r\n  \"firstName\": \"Abdo\",\r\n  \"lastName\": \"Ahmed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Authors by IdBook",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status OK \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"OK\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(50000);\r",
+							"});\r",
+							"pm.test(\"check on header value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).include(\"application/json\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check response and body\",function()\r",
+							"{\r",
+							"pm.response.to.be.ok;\r",
+							"pm.response.to.be.withBody;\r",
+							"pm.response.to.be.json;\r",
+							"});\r",
+							"const jsonData=pm.response.json();\r",
+							"const idbook =jsonData.map(book => book.idBook);\r",
+							"for (var i=0; i < idbook.lenght; i++){\r",
+							" console.log(idbook);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors/authors/books/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"authors",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonDate=pm.response.json();\r",
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status OK \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"OK\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(50000);\r",
+							"});\r",
+							"pm.test(\"check on header value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).include(\"application/json\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check response and body\",function()\r",
+							"{\r",
+							"pm.response.to.be.ok;\r",
+							"pm.response.to.be.withBody;\r",
+							"pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonDate=pm.response.json();\r",
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status OK \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"OK\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(50000);\r",
+							"});\r",
+							"pm.test(\"check on header value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).include(\"application/json\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check response and body\",function()\r",
+							"{\r",
+							"pm.response.to.be.ok;\r",
+							"pm.response.to.be.withBody;\r",
+							"pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"idBook\": 0,\r\n  \"firstName\": \"abdo\",\r\n  \"lastName\": \"ibrahem\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors/{{idupdate}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"{{idupdate}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status code =200\",function()\r",
+							"{\r",
+							"pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check status OK \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.status).to.equal(\"OK\");\r",
+							"});\r",
+							"pm.test(\"check the responseTime \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseTime).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check the response size \",function()\r",
+							"{\r",
+							"pm.expect(pm.response.responseSize).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"check on header (Server) value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Server\")).include(\"Kestrel\")\r",
+							"}\r",
+							");\r",
+							"pm.test(\"check on header value\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Length\")).to.equal('0')\r",
+							"}\r",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors/2",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check if firstName is update\",function(){\r",
+							"pm.expect(pm.response.json().firstName).to.equals(\"abdo\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/v1/Authors/{{idupdate}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"{{idupdate}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
